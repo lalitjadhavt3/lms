@@ -1,3 +1,18 @@
+<?php
+    include 'core/Dbconfig.php';
+    @session_start();
+    //print_r($_SESSION);
+    //exit;
+    if(isset($_SESSION["user_name"]) && isset($_SESSION["mmitibackend"]) && isset($_SESSION["user_type"]))
+      {
+        
+      }
+      else{
+            echo" you are not recognized"; 
+            echo '<script>window.location.replace("'.SITE_URL.'login.php");</script>';
+            exit;
+      }
+      ?>
 <div class="header header-one">
         <div class="header-left header-left-one">
           <a href="index.html" class="logo">
@@ -112,9 +127,9 @@
               <span>Admin</span>
             </a>
             <div class="dropdown-menu">
-              <a class="dropdown-item" href="profile.html"><i data-feather="user" class="me-1"></i> Profile</a>
-              <a class="dropdown-item" href="settings.html"><i data-feather="settings" class="me-1"></i> Settings</a>
-              <a class="dropdown-item" href="login.html"><i data-feather="log-out" class="me-1"></i> Logout</a>
+              <a class="dropdown-item" href="profile.php"><i data-feather="user" class="me-1"></i> Profile</a>
+              <a class="dropdown-item" href="settings.php"><i data-feather="settings" class="me-1"></i> Settings</a>
+              <a class="dropdown-item" href="logout.php"><i data-feather="log-out" class="me-1"></i> Logout</a>
             </div>
           </li>
         </ul>
