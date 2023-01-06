@@ -1,7 +1,7 @@
 <?php
     include 'core/Dbconfig.php';
     @session_start();
-    //print_r($_SESSION);
+    ///print_r($_SESSION);
     //exit;
     if(isset($_SESSION["user_name"]) && isset($_SESSION["mmitibackend"]) && isset($_SESSION["user_type"]))
       {
