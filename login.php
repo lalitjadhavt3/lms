@@ -1,9 +1,5 @@
 <?php include 'core/Dbconfig.php';
 include 'core/AuthClass.php';
-if(!isset($_SESSION)) { @session_start(); }
-if(isset($_SESSION['user_id']) && !empty($_SESSION['user_id'])){
-  header('Location:'.SITE_URL.'index.php');  
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
